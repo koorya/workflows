@@ -1,1 +1,2 @@
-echo "hello dev"
+echo "hello dev" > dev.txt
+
