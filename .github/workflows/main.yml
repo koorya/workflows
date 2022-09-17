@@ -37,5 +37,5 @@ jobs:
       - run: ls -la ../../
       - run: ls -la .. 
       - run: ls -la . 
-      - run: source deploy/dev.sh | ssh -T -p 26 workflows@nsu-peppers-2022.tk
+      - run: cat deploy/dev.sh | ssh -T -p 26 workflows@nsu-peppers-2022.tk
       - run: echo "hello"
