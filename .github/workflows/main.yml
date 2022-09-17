@@ -29,10 +29,11 @@ jobs:
 #       - name: Run a one-line script
 #         run: echo Hello, world!
 
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.DEVELOP_ID_RSA }}
+          known_hosts: ${{ secrets.DEVELOP_KNOWN_HOST }}
 
-      - run: mkdir -p ~/.ssh
-      - run: echo "${{ secrets.DEVELOP_ID_RSA }}" > ~/.ssh/id_rsa
-      - run: chmod 600 ~/.ssh/id_rsa
-      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run: echo ls | ssh -T -p 26 workflows@nsu-peppers-2022.tk
       - run: echo "hello"
