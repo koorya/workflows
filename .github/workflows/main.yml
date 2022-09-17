@@ -32,6 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo ls | ssh -T -p26 workflows@nsu-peppers-2022.tk
+          echo ls | ssh -T -p 26 workflows@nsu-peppers-2022.tk
           echo Add other actions to build,
           echo test, and deploy your project.
